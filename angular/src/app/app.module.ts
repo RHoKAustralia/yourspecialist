@@ -5,10 +5,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { Ng2MapModule } from 'ng2-map';
+import { SearchService } from './search.service';
 import { SearchForm } from './search-form/search-form.component';
 import { SearchResults } from './search-results/search-results.component';
 import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
-
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
     Ng2MapModule,
     DropdownModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

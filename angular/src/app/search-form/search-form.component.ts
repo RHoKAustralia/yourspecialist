@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'search-form',
@@ -10,8 +11,9 @@ export class SearchForm implements OnInit {
 
   public myForm: FormGroup;
   public clusters: string[];
+  public searchService: SearchService;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, searchService: SearchService) {
     this.clusters = [
       "Accommodation/Tenancy",
       "Assess-Skill Ability Needs",
@@ -50,9 +52,9 @@ export class SearchForm implements OnInit {
         cluster: new FormControl("", Validators.required)
     });
   }
+
   onSubmit() {
-      console.log("model-based form submitted");
-      console.log(this.myForm);
+    this.searchService.findProviders(this.myForm.value.postcode, this.myForm.value.cluster);
   }
 
   chooseCluster(c) {
