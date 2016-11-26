@@ -9,11 +9,14 @@ import {HeaderComponent} from './header';
 import {TitleComponent} from './title';
 import {FooterComponent} from './footer';
 
+import {Ng2MapModule} from 'ng2-map';
+
 @NgModule({
   imports: [
     BrowserModule,
     routing,
-    TechsModule
+    TechsModule,
+    Ng2MapModule
   ],
   declarations: [
     RootComponent,
