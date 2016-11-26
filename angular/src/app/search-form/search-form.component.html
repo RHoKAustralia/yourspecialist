@@ -1,15 +1,15 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-     <p>
-         <label>Postcode:</label>
-         <input type="text" formControlName="postcode">
-     </p>
-     <p>
-         <label>Clusters:</label>
-         <select class="form-control" formControlName="cluster">
-           <option *ngFor="let cluster of clusters" [value]="cluster">{{cluster}}</option>
-         </select>
-     </p>
-     <p>
-         <button type="submit" [disabled]="!myForm.valid">Search</button>
-     </p>
+   <p>
+     <label>Postcode:</label>
+     <input type="text" formControlName="postcode">
+   </p>
+   <p>
+     <label>Clusters:</label>
+     <select formControlName="cluster">
+       <option *ngFor="let c of clusters" [value]="c">{{c}}</option>
+     </select>
+   </p>
+   <p>
+     <button type="submit" [disabled]="!myForm.valid">Search</button>
+   </p>
 </form>
