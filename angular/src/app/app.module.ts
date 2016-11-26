@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { Ng2MapModule } from 'ng2-map';
@@ -20,6 +21,16 @@ import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: SearchForm
+      },
+      {
+        path: 'providers',
+        component: SearchResults
+      }
+    ]),
     Ng2MapModule,
     DropdownModule
   ],
