@@ -5,10 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { Ng2MapModule } from 'ng2-map';
+import { SearchFormComponent } from './search-form/search-form.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchFormComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
