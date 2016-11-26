@@ -1,5 +1,6 @@
 
-import geo, os
+import geo
+import os
 
 address = """
 10 OBrien Street
