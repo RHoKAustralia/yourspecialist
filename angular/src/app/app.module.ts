@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { Ng2MapModule } from 'ng2-map';
 import { SearchForm } from './search-form/search-form.component';
 import { SearchResults } from './search-results/search-results.component';
+import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { SearchResults } from './search-results/search-results.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
-    Ng2MapModule
+    Ng2MapModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,22 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-   <p>
-     <label>Postcode:</label>
-     <input type="text" formControlName="postcode">
-   </p>
-   <p>
-     <label>Clusters:</label>
-     <select formControlName="cluster">
-       <option *ngFor="let c of clusters" [value]="c">{{c}}</option>
-     </select>
-   </p>
-   <p>
-     <button type="submit" [disabled]="!myForm.valid">Search</button>
-   </p>
+   <div>
+     <div class="form-group">
+       <label>Postcode</label>
+       <input type="text" class="form-control" placeholder="Enter postcode" formControlName="postcode">
+     </div>
+     <!-- Single button with keyboard nav -->
+     <div class="btn-group" dropdown keyboardNav="true">
+       <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdownToggle>
+         Provider type <span class="caret"></span>
+       </button>
+       <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+         <li role="menuitem"><a class="dropdown-item" href="#">Search all provider types</a></li>
+         <li class="divider dropdown-divider"></li>
+         <li role="menuitem" *ngFor="let c of clusters"><a class="dropdown-item" href="#">{{c}}</a></li>
+       </ul>
+     </div>
+   </div>
+   <div>
+     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" [disabled]="!myForm.valid">Search</button>
+   </div>
 </form>
