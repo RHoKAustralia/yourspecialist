@@ -1,0 +1,9 @@
+{
+  "name": "geo2geojson",
+  "version": "1.0.0",
+  "description": "Utility functions to convert geo data to GeoJSON",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Lea Anthony <lea.anthony@gmail.com>",
+  "license": "ISC"
+}
