@@ -55,6 +55,10 @@ export class SearchForm implements OnInit {
       console.log(this.myForm);
   }
 
+  chooseCluster(c) {
+    this.myForm.patchValue({cluster: c});
+  }
+
   reset() {
     this.myForm.reset();
   }
