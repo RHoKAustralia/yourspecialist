@@ -1,14 +1,13 @@
-Sample record from initial export.
+Sample record from initial export. No Address field.
+See what geo coordinates come back from this.
 
-(392907,	23664,	'spec_come_or_go',	'Info coming soon'),
-(392908,	23664,	'spec_area_cover',	'Info coming soon'),
-(392909,	23664,	'spec_office',	'Info coming soon'),
-(392910,	23665,	'spec_registered_provider_name',	'Aulsebrook B T & K A'),
-(392911,	23665,	'spec_phone',	''),
-(392912,	23665,	'spec_website',	''),
-(392913,	23665,	'spec_email_address',	'aulsebrooke@optusnet.com.au'),
-(392906,	23664,	'spec_speciality',	'Info coming soon'),
-(392905,	23664,	'spec_registered_for_ndis',	'Yes'),
-(392901,	23664,	'spec_suburb',	' TAREE'),
-(392902,	23664,	'spec_state',	' NSW'),
-(392903,	23664,	'spec_postcode',	'2430'),
+TAREE
+NSW
+2430
+
+Sample record with address field.
+
+10 OBrien Street
+CESSNOCK
+NSW
+2325
