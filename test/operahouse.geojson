@@ -1,1 +1,2 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"marker","name":"Opera House"},"geometry":{"type":"Point","coordinates":[151.2152087688446,-33.85688299205084]}}]}
+{"type":"FeatureCollection","features":[
+  {"type":"Feature","properties":{"marker-color":"#7e7e7e","marker-size":"medium","marker-symbol":"marker","name":"Opera House"},"geometry":{"type":"Point","coordinates":[151.2152087688446,-33.85688299205084]}}]}

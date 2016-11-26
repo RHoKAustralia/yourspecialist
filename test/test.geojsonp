@@ -1,1 +1,1 @@
-eqfeed_callback({"type":"FeatureCollection","features":[{"type":"Feature","properties":{"title":"Opera House"},"geometry":{"type":"Point","coordinates":[151.2152087688446,-33.85688299205084]}}]})'
+eqfeed_callback({"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Opera House","marker-symbol":"marker"},"geometry":{"type":"Point","coordinates":[151.2152087688446,-33.85688299205084]}}]})
