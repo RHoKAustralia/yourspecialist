@@ -1,22 +1,55 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-   <div>
-     <div class="form-group">
-       <label>Postcode</label>
-       <input type="text" class="form-control" placeholder="Enter postcode" formControlName="postcode">
-     </div>
-     <!-- Single button with keyboard nav -->
-     <div class="btn-group" dropdown keyboardNav="true">
-       <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdownToggle>
-         Choose provider type <span class="caret"></span>
-       </button>
-       <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="simple-btn-keyboard-nav">
-         <li role="menuitem"><a class="dropdown-item" href="#" (click)="chooseCluster('*')">Search all provider types</a></li>
-         <li class="divider dropdown-divider"></li>
-         <li role="menuitem" *ngFor="let c of clusters"><a class="dropdown-item" href="#" (click)="chooseCluster(c)">{{c}}</a></li>
-       </ul>
-     </div>
-   </div>
-   <div>
-     <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Search</button>
-   </div>
-</form>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-rounded">
+    </div>
+    <div class="col-md-6">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Resources</a>
+        </li>
+        <li>
+          <a href="#">Update My Details</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+    </div>
+    <div class="col-md-8">
+      <h2>
+        Find your NDIS Provider in your local area
+      </h2>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+          <div class="form-group">
+            <label>My Postcode is:</label>
+            <input type="text" class="form-control" placeholder="Enter postcode" formControlName="postcode">
+          </div>
+          <!-- Single button with keyboard nav -->
+          <div class="btn-group" dropdown keyboardNav="true">
+            <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdownToggle>
+              Choose provider type <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+              <li role="menuitem"><a class="dropdown-item" href="#" (click)="chooseCluster('*')">Search all provider types</a></li>
+              <li class="divider dropdown-divider"></li>
+              <li role="menuitem" *ngFor="let c of clusters"><a class="dropdown-item" href="#" (click)="chooseCluster(c)">{{c}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
