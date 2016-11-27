@@ -1,5 +1,5 @@
 <ng2-map center="Sydney, NSW"></ng2-map>
-{{results.length}}
+<h3 [hidden]="results.length > 0">0 providers found</h3>
 <div *ngFor="let r of results">
-  <h2>{{r.name}}</h2>
+  <h2>{{r['Registered Provider Name']}}</h2>
 </div>

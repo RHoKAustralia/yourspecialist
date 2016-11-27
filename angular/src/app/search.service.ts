@@ -13,21 +13,18 @@ export class SearchService {
   public providers:ReplaySubject<any[]> = new ReplaySubject<any[]>();
 
   constructor(http:Http) {
+    this.http = http;
     this.searchUrl = "http://54.206.67.82/services/providersearch";
   }
 
-  findProviders (postcode: string, clusterType:string): ReplaySubject<any[]> {
-    /*
+  findProviders (postcode: string, clusterType:string) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.searchUrl, { postcode: postcode, cluster: clusterType }, options)
-      .map(this.extractData)
-      .catch(this.handleError);
-
-      */
-      this.extractData(null);
-      return this.providers;
+    // this.http.post(this.searchUrl, { postcode: postcode, cluster: clusterType }, options)
+    //   .map(this.extractData)
+    //   .catch(this.handleError);
+    this.extractData(null);
   }
 
   // private extractData(res: Response) {
@@ -65,6 +62,7 @@ export class SearchService {
      }
    }]
    this.providers.next(providers);
+    // this.providers.next(res.json());
   }
 
   private handleError (error: Response | any) {

@@ -10,7 +10,7 @@ import { SearchService } from '../search.service';
 export class SearchResults implements OnInit {
 
   public searchService: SearchService;
-  public results: [];
+  public results: any[];
 
   constructor(searchService: SearchService, private router: Router) {
     var self = this;
