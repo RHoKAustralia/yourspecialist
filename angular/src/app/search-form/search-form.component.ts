@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class SearchForm implements OnInit {
   public clusters: string[];
   public searchService: SearchService;
 
-  constructor(fb: FormBuilder, searchService: SearchService) {
+  constructor(fb: FormBuilder, searchService: SearchService, private router: Router) {
     this.searchService = searchService;
     this.clusters = [
       "Accommodation/Tenancy",
@@ -56,6 +57,7 @@ export class SearchForm implements OnInit {
 
   onSubmit() {
     this.searchService.findProviders(this.myForm.value.postcode, this.myForm.value.cluster);
+    this.router.navigate(['/providers']);
   }
 
   chooseCluster(c) {

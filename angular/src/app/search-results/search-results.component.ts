@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'search-results',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResults implements OnInit {
 
-  constructor() { }
+  public searchService: SearchService;
+
+  constructor(searchService: SearchService, private router: Router) {
+    this.searchService = searchService;
+  }
 
   ngOnInit() {
   }

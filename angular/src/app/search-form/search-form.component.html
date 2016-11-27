@@ -1,9 +1,6 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
-      <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-rounded">
-    </div>
-    <div class="col-md-6">
       <ul class="nav nav-tabs">
         <li class="active">
           <a href="#">Home</a>
@@ -47,7 +44,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btn-primary" [disabled]="!myForm.valid" (click)="onSubmit()">Search</button>
+          <button type="button" class="btn btn-primary" [disabled]="!myForm.valid" (click)="onSubmit()">Search</button>
         </div>
       </form>
     </div>
