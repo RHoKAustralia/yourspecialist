@@ -24,7 +24,7 @@ class Geo:
                           'short_name': admin_area.short_name}
             admin_areas.append(this_admin)
         temp["administrative_areas"] = admin_areas
-        return json.dumps(temp)
+        return temp
 
     def geo_from_address(self, address):
         """Gets full address details for the given address string. Returns JSON data"""
