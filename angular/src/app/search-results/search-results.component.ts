@@ -18,6 +18,7 @@ export class SearchResults implements OnInit {
     this.searchService.providers.subscribe(function(value) {
       self.results = value;
     });
+    console.log(self.results)
   }
 
   ngOnInit() {
