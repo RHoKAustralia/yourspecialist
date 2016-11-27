@@ -10,7 +10,7 @@ export class SearchService {
 
   searchUrl:string;
   http: Http;
-  public providers:ReplaySubject<any> = new ReplaySubject<any>();
+  public providers:ReplaySubject<any[]> = new ReplaySubject<any[]>();
 
   constructor(http:Http) {
     this.searchUrl = "http://54.206.67.82/services/providersearch";

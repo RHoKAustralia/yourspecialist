@@ -10,9 +10,14 @@ import { SearchService } from '../search.service';
 export class SearchResults implements OnInit {
 
   public searchService: SearchService;
+  public results: [];
 
   constructor(searchService: SearchService, private router: Router) {
+    var self = this;
     this.searchService = searchService;
+    this.searchService.providers.subscribe(function(value) {
+      self.results = value;
+    });
   }
 
   ngOnInit() {
