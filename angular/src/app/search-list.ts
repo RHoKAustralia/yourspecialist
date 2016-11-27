@@ -1,6 +1,5 @@
 import { Component } from 'angular2/core';
 import { SearchService } from './search.service';
-import { SearchItemRenderer } from'./search-item-renderer.ts';
 import { SearchPipe } from './search-form.pipe';
 
 @Componet({
