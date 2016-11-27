@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -68,3 +69,11 @@ export class SearchForm implements OnInit {
   ngOnInit() {
   }
 }
+
+@NgModule({
+  imports: [ BrowserModule ],
+  declarations: [ SearchService, OrdinalPipe ],
+  bootstrap: [ SearchService ]
+})
+
+export class SearchService {}
