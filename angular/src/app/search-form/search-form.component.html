@@ -11,29 +11,26 @@
         <li>
           <a href="#">Resources</a>
         </li>
-        <li>
-          <a href="#">Update My Details</a>
-        </li>
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+      <img alt="YourSpecialist Logo" width='200px' src="./assets/images/logo-w-text.jpg">
     </div>
     <div class="col-md-8">
-      <h2>
+      <h3>
         Find your NDIS Provider in your local area
-      </h2>
+      </h3>
       <form [formGroup]="myForm">
         <div>
           <div class="form-group">
             <label>My Postcode is:</label>
-            <input type="text" class="form-control" placeholder="Enter postcode" formControlName="postcode">
+            <input type="text" autofocus class="form-control input-lg" placeholder="Enter postcode" formControlName="postcode">
           </div>
           <!-- Single button with keyboard nav -->
-          <div class="btn-group" dropdown keyboardNav="true">
-            <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdownToggle>
+          <div class="btn-group" class="form-group" dropdown keyboardNav="true">
+            <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary btn-lg" dropdownToggle>
               Choose provider type <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="simple-btn-keyboard-nav">
@@ -43,8 +40,8 @@
             </ul>
           </div>
         </div>
-        <div>
-          <button type="button" class="btn btn-primary" [disabled]="!myForm.valid" (click)="onSubmit()">Search</button>
+        <div class="form-group">
+          <button type="button" class="btn btn-success btn-lg" [disabled]="!myForm.valid" (click)="onSubmit()">Search</button>
         </div>
       </form>
     </div>
