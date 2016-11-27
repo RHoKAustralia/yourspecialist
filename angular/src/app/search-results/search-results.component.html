@@ -1,5 +1,24 @@
-<ng2-map center="Sydney, NSW"></ng2-map>
-<h3 [hidden]="results.length > 0">0 providers found</h3>
-<div *ngFor="let r of results">
-  <h2>{{r['Registered Provider Name']}}</h2>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-12 banner-div clearfix">
+          <img class="logo pull-left" src="./assets/images/YourSpecialistLogoCropped2.jpg">
+    </div>
+
+    <div class="col-md-3 result-list">
+      <ul class="list-group"  *ngFor="let r of results">
+        <!-- ng-for this element -->
+        <li class="list-group-item">{{r['Registered Provider Name']}}<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+      </ul>
+    </div>
+
+    <div class="col-md-9 map">
+      <ng2-map center="Sydney, NSW"></ng2-map>
+      <h3 [hidden]="results.length > 0">0 providers found</h3>
+      <div *ngFor="let r of results">
+        <h2>{{r['Registered Provider Name']}}</h2>
+      </div>
+    </div>
+
+  </div>  
 </div>

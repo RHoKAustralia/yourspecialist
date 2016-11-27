@@ -1,0 +1,11 @@
+.result-list, .map {
+    padding: 0px;
+}
+.banner-div {
+    padding: 5px;
+}
+.logo {
+    max-height: 100px;
+    max-width: 100px;
+    padding-left: 10px;
+}
