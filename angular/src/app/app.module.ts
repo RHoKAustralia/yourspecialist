@@ -10,12 +10,14 @@ import { SearchService } from './search.service';
 import { SearchForm } from './search-form/search-form.component';
 import { SearchResults } from './search-results/search-results.component';
 import { DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ProviderCardComponent } from './provider-card/provider-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchForm,
-    SearchResults
+    SearchResults,
+    ProviderCardComponent
   ],
   imports: [
     BrowserModule,
