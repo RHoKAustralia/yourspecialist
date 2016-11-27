@@ -28,7 +28,7 @@
       <h2>
         Find your NDIS Provider in your local area
       </h2>
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="myForm">
         <div>
           <div class="form-group">
             <label>My Postcode is:</label>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Search</button>
+          <button class="btn btn-primary" [disabled]="!myForm.valid" (click)="onSubmit()">Search</button>
         </div>
       </form>
     </div>

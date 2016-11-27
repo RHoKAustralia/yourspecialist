@@ -14,6 +14,7 @@ export class SearchForm implements OnInit {
   public searchService: SearchService;
 
   constructor(fb: FormBuilder, searchService: SearchService) {
+    this.searchService = searchService;
     this.clusters = [
       "Accommodation/Tenancy",
       "Assess-Skill Ability Needs",
