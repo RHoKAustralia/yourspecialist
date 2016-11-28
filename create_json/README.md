@@ -2,23 +2,47 @@
 
 Scripts to scrape NDIS website to find Providers listed by cluster and turn them into JSON files ready for importing into database.
 
-# To use
+# Dependencies
+
+To run manually from source requires the following (this may not be exhaustive). Tested only on unbuntu 14.04 but should be portable to other linux distributions.
+
+- `bash` shell or similar
+- `python3`
+- `python3` library `requests`
+- `java`
+- `tabular-java`
+
+## Tabular
+
+Requires the command line version https://github.com/tabulapdf/tabula-java which itself has a dependency on Java. During development the Ubuntu package version `OpenJDK Runtime Environment (IcedTea 2.6.8) (7u121-2.6.8-1ubuntu0.14.04.1)` was used without problem.
+
+# To use (Linux)
 
 The ultimate intent is to create a Dockerfile to automate this process and remove the need for the end user to have a number of dependencies installed.
 
 1. Download PDFs
 
-`./`
+```
+cd scrape_website
+./grab_provider_lists.sh
+cd ..
+```
 
-..* Leaves a list of files that it attempted to download in `.`
-..* Writes downloaded files into directory `./raw_data`
+..* Leaves a list of files that it attempted to download in `scrape_website/files_to_grab.txt`
+..* Writes downloaded files into directory `raw_data/`
 
 2. Turn PDFs into JSON files
 
-`./`
+This requires `tabular` jar file to be found in the directory `pdftojson/`, see dependencies above.
 
-..* Process each and every file found in `./raw_data`
-..* Leaves `.json` and intermediate `.csv` files in `./`
+```
+cd pdftojson
+./createJSONfromPDF.sh
+cd ..
+```
+
+..* Process each and every file found in `raw_data/`
+..* Leaves `.json` and intermediate `.csv` files in `pdftojson/`
 
 # Debugging
 
@@ -34,4 +58,4 @@ The tricky step is turning the PDF into a CSV file. PDF is not a format designed
 
 Once in CVS format the JSON conversion should be fairly robust. If you are experiencing problems look at the intermediate CSV files and compare them by eye with the PDFs first.
 
-John Judge, 26 Nov 2016
+John Judge, 28 Nov 2016
