@@ -6,7 +6,7 @@ filelist="files_to_grab.txt"
 # put downloaded files in this directory
 outputdir='../raw_data'
 
-python3 obtain_cluster_files.py > $filelist
+python3 list_cluster_files.py > $filelist
 
 number=`wc -l $filelist | cut -f1 -d' '`
 echo "Found $number files to download from NDIS website"
