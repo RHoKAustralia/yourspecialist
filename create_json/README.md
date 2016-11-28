@@ -20,7 +20,7 @@ Requires the command line version https://github.com/tabulapdf/tabula-java which
 
 The ultimate intent is to create a Dockerfile to automate this process and remove the need for the end user to have a number of dependencies installed.
 
-1. **Download PDFs**
+**1. Download PDFs**
 
 ```
 cd scrape_website
@@ -28,10 +28,10 @@ cd scrape_website
 cd ..
 ```
 
-- Leaves a list of files that it attempted to download in `scrape_website/files_to_grab.txt`
-- Writes downloaded files into directory `raw_data/`
+  - Leaves a list of files that it attempted to download in `scrape_website/files_to_grab.txt`
+  - Writes downloaded files into directory `raw_data/`
 
-2. **Turn PDFs into JSON files**
+**2. Turn PDFs into JSON files**
 
 This requires `tabular` jar file to be found in the directory `pdftojson/`, see dependencies above.
 
@@ -41,8 +41,8 @@ cd pdftojson
 cd ..
 ```
 
-- Process each and every file found in `raw_data/`
-- Leaves `.json` and intermediate `.csv` files in `pdftojson/`
+  - Process each and every file found in `raw_data/`
+  - Leaves `.json` and intermediate `.csv` files in `pdftojson/`
 
 # Debugging
 
