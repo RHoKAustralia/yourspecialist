@@ -6,7 +6,7 @@ Scripts to scrape NDIS website to find Providers listed by cluster and turn them
 
 To run manually from source requires the following (this may not be exhaustive). Tested only on unbuntu 14.04 but should be portable to other linux distributions.
 
-- `bash` shell or similar
+- `bash` or similar `sh` based shell
 - `python3`
 - `python3` library `requests`
 - `java`
