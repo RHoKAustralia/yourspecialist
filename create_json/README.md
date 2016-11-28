@@ -48,11 +48,11 @@ cd ..
 
 ## Wrong / Not Enough PDF Files Found
 
-The web site is scrapped by the script `./` which makes assumptions on what page on the NDIS web site lists the files to be downloaded and how those files are named.
+The web site is scrapped by the script `./scrape_website/list_cluster_files.py` which makes assumptions on what page on the NDIS web site lists the files to be downloaded and how those files are named.
 
-Look in the script for the variable ` ` to chnage the page inspected. Look in the script for the list named `WORDS` to change which files are selected for download. Only URLs with all the words in the list are selected, you may have to fine tune this list over time as the NDIS web site does not use a consistent namign convention.
+Look in the script for the variable `baseURL` to chnage the page inspected. Look in the script for the list named `WORDS` to change which files are selected for download. Only URLs with all the words in the list are selected, you may have to fine tune this list over time as the NDIS web site does not use a consistent a naming convention.
 
-## PDF to JSON
+## PDF to JSON_
 
 The tricky step is turning the PDF into a CSV file. PDF is not a format designed for machine reading and we are fortunate that there is a great tool, [Tabular](https://github.com/tabulapdf/tabula-java/wiki) that does this job for us. Even so the parsing is not an exact science and while Tabular works a treat right now that may not be the case if NDIS changes their PDF format unexpectedly.
 
