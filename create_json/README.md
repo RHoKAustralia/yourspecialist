@@ -28,8 +28,8 @@ cd scrape_website
 cd ..
 ```
 
-..* Leaves a list of files that it attempted to download in `scrape_website/files_to_grab.txt`
-..* Writes downloaded files into directory `raw_data/`
+- Leaves a list of files that it attempted to download in `scrape_website/files_to_grab.txt`
+- Writes downloaded files into directory `raw_data/`
 
 2. **Turn PDFs into JSON files**
 
@@ -41,8 +41,8 @@ cd pdftojson
 cd ..
 ```
 
-..* Process each and every file found in `raw_data/`
-..* Leaves `.json` and intermediate `.csv` files in `pdftojson/`
+- Process each and every file found in `raw_data/`
+- Leaves `.json` and intermediate `.csv` files in `pdftojson/`
 
 # Debugging
 
