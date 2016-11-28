@@ -58,4 +58,4 @@ The tricky step is turning the PDF into a CSV file. PDF is not a format designed
 
 Once in CVS format the JSON conversion should be fairly robust. If you are experiencing problems look at the intermediate CSV files and compare them by eye with the PDFs first.
 
-John Judge, 28 Nov 2016
+*John Judge, 28 Nov 2016*
